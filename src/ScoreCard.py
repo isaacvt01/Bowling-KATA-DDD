@@ -143,12 +143,5 @@ class ScoreCard:
                 self.score += self.frames[i].individualScore
 
 
-if __name__ == '__main__':
-    tirada = '8/549-XX5/53639/9/X'
-    scoreCard = ScoreCard(tirada)
-    scoreCard.calculateScore()
-    print(scoreCard.checkFrames())
-    print(scoreCard)
-    print(len(tirada))
 
 
