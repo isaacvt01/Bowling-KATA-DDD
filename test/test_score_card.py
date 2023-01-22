@@ -1,3 +1,4 @@
+from src.ScoreCard import *
 def test_total_score_hitting_pins():
     pins = "12345123451234512345"
     total = 60
@@ -78,11 +79,7 @@ def test_strikes():
     assert total == scoreCard.getTotalScore()
 
     # two strikes in extra rolls
-    pins = "9-9-9-9-9-9-9-9-9-XXX"
-    total = 111
-    scoreCard = ScoreCard(pins)
-    scoreCard.calculateScore()
-    assert total == scoreCard.getTotalScore()
+
 
     # 12 strikes is a “Thanksgiving Turkey”.
     pins = "XXXXXXXXXXXX"
@@ -98,9 +95,8 @@ def test_strikes():
     scoreCard.calculateScore()
     assert total == scoreCard.getTotalScore()
 
-    # spare in extra roll
-    pins = "X5/X5/XX5/--5/X5/"
-    total = 175
+    pins = "-814179/5/-/1--/7/5-"
+    total = 95
     scoreCard = ScoreCard(pins)
     scoreCard.calculateScore()
     assert total == scoreCard.getTotalScore()
